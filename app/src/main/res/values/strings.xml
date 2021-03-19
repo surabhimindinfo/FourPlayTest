@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FourplayTest</string>
+    <string name="top_heading">Top Heading</string>
+    <string name="top_author">Top Author</string>
+    <string name="inspirations">Inspirations</string>
+    <string name="themes">Themes</string>
+    <string name="google_maps_key">AIzaSyAriox-QmsPVf9gfzlR6zqP-xVutp1VoWI</string>
+</resources>
