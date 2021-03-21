@@ -1,12 +1,17 @@
 package com.example.fourplaytest.utils
 
+import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.net.ConnectivityManager
 import android.view.Gravity
-import android.widget.ProgressBar
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import com.example.fourplaytest.R
+import kotlinx.android.synthetic.main.custom_layout.view.*
 
 object Utility {
 
@@ -49,5 +54,18 @@ object Utility {
 
     }
 
+    fun Context.showCustomDialog( ) {
+        val mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_layout, null)
+        //AlertDialogBuilder
+        val mBuilder = AlertDialog.Builder(this)
+            .setView(mDialogView)
+         //show dialog
+        val  mAlertDialog = mBuilder.show()
+         mDialogView.ok_btn.setOnClickListener {
+            //dismiss dialog
+            mAlertDialog.dismiss()
 
+        }
+
+    }
 }

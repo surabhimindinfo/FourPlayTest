@@ -1,7 +1,9 @@
 package com.example.fourplaytest.adapters
 
+import android.app.ActionBar
 import android.content.Context
 import android.content.Intent
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,7 +40,8 @@ class InspirationAdapter(private val context: Context, private var list: Mutable
 
         holder.view.requestLayout()
         holder.view.getLayoutParams()!!.width = 500
-        holder.view.getLayoutParams()!!.height = 750
+        holder.view.getLayoutParams()!!.height = ActionBar.LayoutParams.WRAP_CONTENT
+        holder.text?.gravity=Gravity.CENTER
         Glide.with(context).load(article.getUrlToImage()).into(holder.image!!)
         holder.view.setOnClickListener(View.OnClickListener {
             context.startActivity( Intent(context, MapActivity::class.java))

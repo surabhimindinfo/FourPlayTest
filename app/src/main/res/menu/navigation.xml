@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/navigation_room"
-        android:icon="@drawable/ic_room"
+        android:icon="@drawable/ic_rooms"
         android:title="Rooms"/>
     <item
         android:id="@+id/navigation_shopping"
